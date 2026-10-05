@@ -22,11 +22,78 @@
         // console.log("A * B");
         // console.log("😊");
 
-        let a = Number(window.prompt("Digite o primeiro numero"));
-        let b = Number(window.prompt("Digite o segundo numero"));
-        let c = Number(window.prompt("Digite o terceiro numero"));
-        let media = (a + b + c) / 3;
-        alert("sua media e:" +media);
+        // let a = Number(window.prompt("Digite o primeiro numero"));
+        // let b = Number(window.prompt("Digite o segundo numero"));
+        // let c = Number(window.prompt("Digite o terceiro numero"));
+        // let media = (a + b + c) / 3;
+        // alert("sua media e:" + media);
+        // // switch (media) {
+        //     case 0:
+        //         alert("Você foi reporvado com a pior nota possivel! Va estudar")
+        //         break;
+        //     case 1:
+        //         alert("Voce foi reprovado com a segunda pior nota possivel! Va estudar tambem")
+        //         break;
+        //     case 2:
+        //         alert("Você foi reprovado com a terceira pior nota possivel! va estudar tambem")
+        //         break;
+        //     case 3:
+        //         alert("voce foi reprovado igual aos outros! va estudar tambem")
+        //         break;
+        //     case 4:
+        //         alert("voce foi reprovado!")
+        //         break;
+        //     case 5:
+        //         alert("voce foi reprovado mas tem potencial")
+        //         break;
+        //     case 6:
+        //         alert("voce foi reprovado mas quase chegou la")
+        //         break;
+        //     case 7:
+        //         if (c >= 8) {
+        //             alert("Voce foi aprovado! mas se arrastando")
+        //         } else {
+        //             alert("voce esta de recuperação! precisava tirar mais de 8 na ultima prova")
+        //         }
+        //     case 8:
+        //         if (c >= 8) {
+        //             alert("voce foi aprovado muito bem")
+        //         } else {
+        //             alert("voce esta de recuperação! precisava tirar mais de 8 na ultima prova")
+        //         }
+        //     case 9:
+        //         if (c >= 8) {
+        //             alert("voce foi aprovado quase perfeitamente")
+        //         } else {
+        //             alert("voce esta de recuperação! precisava tirar mais de 8 na ultima prova")
+        //         }
+        //     case 10:
+        //         if (c >= 8) {
+        //             alert("voce foi aprovado com gloria")
+        //         } else {
+        //             alert("voce esta de recuperação! precisava tirar mais de 8 na ultima prova")
+        //         }
+
+        //         break;
+        //     default:
+        //         break;
+        // }
+        // media >= 7 ? c >= 8 ? alert("Você esta aprovado") : alert("voce esta de recuperação") : alert("Você esta reprovado")
+        // let diadasemana;
+
+        // for (let index = 7; index >= 1; index--) {
+        //     diadasemana = prompt("qual o" + index + "º dia da semana?")
+
+        // }
+        let quantidadenotas = notas(prompt("quantas notas o aluno tera?"));
+        let soma = 0
+        for (let index = 1; index <= quantidadenotas; index++) {
+            let nota = number(prompt('digite a ${index} ºnota;'));
+            soma= soma+nota
+        }
+        let media=soma/quantidadenotas
+        alert("A media do aluno e"+media)
+
     </script>
 </body>
 
