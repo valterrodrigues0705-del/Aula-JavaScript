@@ -85,15 +85,14 @@
         //     diadasemana = prompt("qual o" + index + "º dia da semana?")
 
         // }
-        let quantidadenotas = notas(prompt("quantas notas o aluno tera?"));
+        let quantidadenotas = notas = prompt("quantas notas o aluno tera?");
         let soma = 0
         for (let index = 1; index <= quantidadenotas; index++) {
-            let nota = number(prompt('digite a ${index} ºnota;'));
-            soma= soma+nota
+            let nota = Number(prompt("Digite a nota" + index))
+            soma = soma + nota
         }
-        let media=soma/quantidadenotas
-        alert("A media do aluno e"+media)
-
+        let media = soma / quantidadenotas;
+        alert("a media do aluno e:" + media);
     </script>
 </body>
 
