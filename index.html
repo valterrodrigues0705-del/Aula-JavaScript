@@ -27,7 +27,24 @@
         // let c = Number(window.prompt("Digite o terceiro numero"));
         // let media = (a + b + c) / 3;
         // alert("sua media e:" + media);
-        // // switch (media) {
+
+        // media >= 7 ? c >= 8 ? alert("Você esta aprovado") : alert("voce esta de recuperação") : alert("Você esta reprovado")
+        // let diadasemana;
+
+        // for (let index = 7; index >= 1; index--) {
+        //     diadasemana = prompt("qual o" + index + "º dia da semana?")
+
+        // }
+        // let quantidadenotas = notas = prompt("quantas notas o aluno tera?");
+        // let soma = 0
+        // for (let index = 1; index <= quantidadenotas; index++) {
+        //     let nota = Number(prompt("Digite a nota" + index))
+        //     soma = soma + nota
+        // }
+        // let media = soma / quantidadenotas;
+        // alert("a media do aluno e:" + media);
+
+        // switch (media = soma / quantidadenotas) {
         //     case 0:
         //         alert("Você foi reporvado com a pior nota possivel! Va estudar")
         //         break;
@@ -78,21 +95,43 @@
         //     default:
         //         break;
         // }
-        // media >= 7 ? c >= 8 ? alert("Você esta aprovado") : alert("voce esta de recuperação") : alert("Você esta reprovado")
-        // let diadasemana;
 
-        // for (let index = 7; index >= 1; index--) {
-        //     diadasemana = prompt("qual o" + index + "º dia da semana?")
-
+        // let quantasnotas = Number(prompt("Quantas notas você quer digitar")), soma = 0
+        // for (let index = 1; index <= quantasnotas; index++) {
+        //     let numerodigitado = Number(prompt("Qual a " + index + "º nota?"))
+        //     soma = soma + numerodigitado
         // }
+        // let media = soma / quantasnotas
+        // alert("sua media e" + media)
+        // let quantasnotas = Number(prompt("Quantas notas você quer digitar")), soma = 0, index = 1;
+        // while (index <= quantasnotas) {
+        //     let numerodigitado = Number(prompt("Qual a " + index + "º nota?"))
+        //     soma = soma + numerodigitado
+        //     index++
+        // }
+        // let media = soma / quantasnotas
+        // alert("sua media e" + media)
+        // let idades = [33, 21, 7, 48, 51, 3]
+        // let frutas = ["banana", "maça", "uva", "laranja", "jaca"]
+        // alert(idades[1])
+
+
         let quantidadenotas = notas = prompt("quantas notas o aluno tera?");
         let soma = 0
+        let notas = [nota, media]
         for (let index = 1; index <= quantidadenotas; index++) {
             let nota = Number(prompt("Digite a nota" + index))
             soma = soma + nota
         }
-        let media = soma / quantidadenotas;
-        alert("a media do aluno e:" + media);
+        function media(soma, numeros) {
+            return soma / numeros;
+        }
+
+        // function ehdivisivel(primeironumero, segundonumero) {
+        //     if (primeironumero % segundonumero == 0) return true
+        //     else return false
+        // }
+        // alert(ehdivisivel(52, 2))
     </script>
 </body>
 
