@@ -116,17 +116,19 @@
         // alert(idades[1])
 
 
-        let quantidadenotas = notas = prompt("quantas notas o aluno tera?");
+        let quantidadenotas=Number(prompt("quantas notas o aluno tera?"));
         let soma = 0
-        let notas = [nota, media]
+        let notas = []
         for (let index = 1; index <= quantidadenotas; index++) {
             let nota = Number(prompt("Digite a nota" + index))
+            notas.push(nota)
             soma = soma + nota
         }
         function media(soma, numeros) {
             return soma / numeros;
         }
-
+        let mediaFinal = media (soma, quantidadenotas)
+        alert("notas do aluno: " + notas.join(", ") + "\nMedia: " + mediaFinal.toFixed(2));
         // function ehdivisivel(primeironumero, segundonumero) {
         //     if (primeironumero % segundonumero == 0) return true
         //     else return false
