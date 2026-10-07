@@ -116,24 +116,41 @@
         // alert(idades[1])
 
 
-        let quantidadenotas=Number(prompt("quantas notas o aluno tera?"));
-        let soma = 0
-        let notas = []
-        for (let index = 1; index <= quantidadenotas; index++) {
-            let nota = Number(prompt("Digite a nota" + index))
-            notas.push(nota)
-            soma = soma + nota
-        }
+        // let quantidadenotas=Number(prompt("quantas notas o aluno tera?"));
+        // let soma = 0
+        // let notas = []
+        // for (let index = 1; index <= quantidadenotas; index++) {
+        //     let nota = Number(prompt("Digite a nota" + index))
+        //     notas.push(nota)
+        //     soma = soma + nota
+        // }
+        // function media(soma, numeros) {
+        //     return soma / numeros;
+        // }
+        // let mediaFinal = media (soma, quantidadenotas)
+        // alert("notas do aluno: " + notas.join(", ") + "\nMedia: " + mediaFinal);
+
+
+
         function media(soma, numeros) {
             return soma / numeros;
         }
-        let mediaFinal = media (soma, quantidadenotas)
-        alert("notas do aluno: " + notas.join(", ") + "\nMedia: " + mediaFinal.toFixed(2));
+        let notas = [], quantasnotas = Number(prompt("quantas notas o aluno tera?")), soma = 0
+        for (let index = 1; index <= quantasnotas; index++) {
+            notas[index - 1] = Number(prompt("Qual a " + index + "ª nota?"))
+            soma = soma + notas[index - 1]
+        }
+        alert("Suas notas foram:" + notas + ". E sua media foi " + media(soma, quantasnotas))
+
+
         // function ehdivisivel(primeironumero, segundonumero) {
         //     if (primeironumero % segundonumero == 0) return true
         //     else return false
         // }
         // alert(ehdivisivel(52, 2))
+
+
+
     </script>
 </body>
 
