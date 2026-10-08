@@ -8,29 +8,99 @@
     <style>
         #minhadiv {
             background-color: pink;
-            height: 300px;
+            min-height: 300px;
             width: 200px;
+        }
+
+        .item-lista {
+            background-color: greenyellow;
         }
     </style>
 </head>
 
 <body>
     <div id="minhadiv"></div>
-    <input type="text" name="" id="campo-texto">
-    <button id="meu-botao">mudar texto</button>
+    <form action="#" method="post">
+        <input type="text" id="campo-texto">
+        <button id="meu-botao" type="submit">mudar texto</button>
+    </form>
     <script>
         let divrosa = document.querySelector("#minhadiv");
         let textoinput = document.querySelector("#campo-texto")
         console.log(divrosa);
 
-        minhafuncao = function mudartexto() {
+        minhafuncao = function mudartexto(evento) {
             // divrosa.textContent = "MEU TEXTO";
-            divrosa.textContent = textoinput.value;
+            evento.preventDefault();
+            let novadiv = document.createElement("div")
+            novadiv.textContent = textoinput.value
+            novadiv.classList.add("item-lista");
+            novadiv.style.marginLeft = "30px";
+            divrosa.append(novadiv)
         }
 
         let botao = document.querySelector("#meu-botao")
         console.log(botao);
         botao.addEventListener("click", minhafuncao)
+
+        let alunos = [
+            {
+                nome: "leonardo",
+                idade: 39,
+                curso: "FullStack",
+                turno: "Manha",
+                data_de_inicio: "09/09/2026"
+            },
+            {
+                nome: "Matheus",
+                idade: 25,
+                curso: "IA",
+                turno: "Manha",
+                data_de_inicio: "09/09/2026"
+            },
+            {
+                nome: "Jessica",
+                idade: 18,
+                curso: "FullStack",
+                turno: "Manha",
+                data_de_inicio: "09/09/2026"
+            },
+            {
+                nome: "Andre",
+                idade: 35,
+                curso: "FullCycle",
+                turno: "Manha",
+                data_de_inicio: "09/09/2026"
+            },
+            {
+                nome: "Diogo",
+                idade: 30,
+                curso: "IA",
+                turno: "Manha",
+                data_de_inicio: "09/09/2026"
+            },
+            {
+                nome: "Esther",
+                idade: 25,
+                curso: "FullStack",
+                turno: "Manha",
+                data_de_inicio: "09/09/2026"
+            },
+
+        ]
+
+        console.log(alunos);
+        // let mostrartodososnomes = function motrarnome(aluno) {
+        //     alert(aluno.nome+aluno.idade) 
+
+        // }
+        // alunos.forEach(mostrartodososnomes)
+
+        // let listartodososnomes = function filtrarosnomes(aluno){
+        //     return aluno.idade
+        // }
+        // alert(alunos.map(listartodososnomes))
+        alert(alunos.map((aluno) => { return aluno.idade }))
     </script>
 </body>
 
