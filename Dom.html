@@ -86,10 +86,17 @@
                 turno: "Manha",
                 data_de_inicio: "09/09/2026"
             },
+            {
+                nome: "Jennifer",
+                idade: 25,
+                curso: "FullStack",
+                turno: "Manha",
+                data_de_inicio: "09/09/2026"
+            },
 
         ]
 
-        console.log(alunos);
+
         // let mostrartodososnomes = function motrarnome(aluno) {
         //     alert(aluno.nome+aluno.idade) 
 
@@ -100,7 +107,29 @@
         //     return aluno.idade
         // }
         // alert(alunos.map(listartodososnomes))
-        alert(alunos.map((aluno) => { return aluno.idade }))
+        // alert(alunos.map((aluno) => { return aluno.idade }))
+        console.log(alunos.filter((aluno) => aluno.curso == "IA"))
+
+        let alunonovo = {
+            nome: "andre",
+            idade: 15,
+            Curso: "FullCycle",
+            turno: "Noite",
+            data_de_inicio: "09/10/2026",
+        }
+        alunos.push(alunonovo)
+
+
+        alunos.push({
+            nome: "edilson",
+            idade: 30,
+            curso: "Fullcycle",
+            turno: "Tarde",
+            data_de_inicio: "09/10/2026"
+        })
+        console.log(alunos);
+        let alunoexcluido = alunos.pop()
+        console.log(alunoexcluido)
     </script>
 </body>
 
